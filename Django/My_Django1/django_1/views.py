@@ -43,3 +43,17 @@ def random_max_number(request, max_number):
     </html>
     """
     return HttpResponse(message)
+
+def random_min_max_number(request, min_number, max_number):
+
+    my_number = random.randint(min_number, max_number)
+
+    message = f"""
+    <html>
+      <body>
+       <p>Użytkownik podał wartość: {min_number} i {max_number}</p>
+       <p>Wylosowano liczbę: {my_number}</p>
+      </body>
+    </html>
+    """
+    return HttpResponse(message)

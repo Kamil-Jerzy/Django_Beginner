@@ -23,4 +23,5 @@ urlpatterns = [
     path('hello/', views.hello_world),
     path('random/', views.random_number),
     path('random/<int:max_number>', views.random_max_number),
+    path('random/<int:min_number>/<int:max_number>', views.random_min_max_number),
 ]
