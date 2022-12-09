@@ -15,6 +15,15 @@ def hello_world(request):
     """
     return HttpResponse(message)
 
+def hello_name(request, name):
+    message = f"""
+    <html>
+      <body>
+       <p>Hello {name}!</p>
+      </body>
+    </html>
+    """
+    return HttpResponse(message)
 
 def random_number(request):
 
